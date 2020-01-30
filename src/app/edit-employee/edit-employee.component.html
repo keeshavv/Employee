@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+<br>
+
+<a routerLink="/employee" routerLinkActive="styleactive" [routerLinkActiveOptions]="{exact:true}">Employee List</a> &nbsp;&nbsp;
+<a routerLink="/addEmployee" routerLinkActive="styleactive">Add Employee</a>
+
+<br> <br>
+<h3>Edit Employee</h3>
+
+<form [formGroup]="EditForm" (ngSubmit)="EditEmployee(EditForm.value)">
+    <label for="name"> Employee Name </label>
+    <input id="name" formControlName="name" [(ngModel)]="data.name"> <br> <br>
+    <label for="location"> Location </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select  id="location" formControlName="location" [(ngModel)]="data.location">
+   <option value="Bangalore">Bangalore</option>
+   <option value="Chennai">Chennai</option>
+   <option value="Pune">Pune</option>
+   <option value="Hyderabad">Hyderabad</option>
+   </select>
+    <br> <br>
+    <label for="email"> Email </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="email" formControlName="email" [(ngModel)]="data.email"> <br> <br>
+    <label for="mobile"> Mobile </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="mobile" formControlName="mobile" [(ngModel)]="data.mobile"> <br> <br>
+    <button type="submit" id="update" [disabled]="EditForm.invalid">Update</button>
+  </form>

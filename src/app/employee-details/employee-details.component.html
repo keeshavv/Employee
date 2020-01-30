@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<br>
+
+<a routerLink="/employee" routerLinkActive="styleactive" [routerLinkActiveOptions]="{exact:true}">Employee List</a> &nbsp;&nbsp;
+<a routerLink="/addEmployee" routerLinkActive="styleactive">Add Employee</a>
+
+<br> <br>
+<h3>Employee Details</h3>
+<div>
+    &nbsp;&nbsp;&nbsp;<label for="id" id="id">Id:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.id}}</label> <br><br>
+    &nbsp;&nbsp;&nbsp;<label for="name" id="name">Name: &nbsp;&nbsp;&nbsp;{{data.name}}</label> <br><br>
+    &nbsp;&nbsp;&nbsp;<label for="location" id="location">Location:&nbsp; {{data.location}}</label> <br><br>
+    &nbsp;&nbsp;&nbsp;<label for="email" id="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{data.email}}</label> <br><br>
+    &nbsp;&nbsp;&nbsp;<label for="mobile" id="mobile">Mobile:&nbsp;&nbsp;&nbsp; {{data.mobile}}</label> <br><br>
+    &nbsp;&nbsp;&nbsp;<h3><button><a routerLink="/employee">Back</a></button></h3>
+</div>
